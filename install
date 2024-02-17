@@ -1,5 +1,6 @@
+# !/bin/bash
 sudo apt-get update
-sudo apt-get install zsh
+sudo apt-get install -y zsh
 
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -8,9 +9,13 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 # Install starship
-curl -sS https://starship.rs/install.sh | sh
-# echo -e '\neval "$(starship init zsh)"' >> ~/.zshrc
+export STARSHIP_CONFIG=$HOME/.starship/config.toml
+sudo curl -sS https://starship.rs/install.sh | sh
 mkdir -p ~/.config && touch ~/.config/starship.toml
 
-sudo apt install jq
-sudo apt install stow
+sudo apt-get install -y jq
+
+sudo apt-get install -y stow
+stow --adopt -R --target=$HOME .
+
+source ~/.zshrc
