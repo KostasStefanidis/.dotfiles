@@ -1,0 +1,7 @@
+alias lla='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+if [[ $(uname -r) == *WSL ]]; then
+    alias explorer='/mnt/c/Windows/explorer.exe || true'
+fi

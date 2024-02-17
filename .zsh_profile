@@ -1,0 +1,4 @@
+export UID=$(id -u)
+export GID=$(id -g)
+export PATH=~/.local/bin:$PATH
+export STARSHIP_CONFIG=$HOME/.starship/config.toml

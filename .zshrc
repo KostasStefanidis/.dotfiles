@@ -23,18 +23,13 @@ else
   export EDITOR='code'
 fi
 
-alias lla='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
-if [[ $(uname -r) == *WSL ]]; then
-    alias explorer='/mnt/c/Windows/explorer.exe || true'
+if [ -f $HOME/.zsh_profile ]; then
+    source $HOME/.zsh_profile
 fi
-export UID=$(id -u)
-export GID=$(id -g)
 
-export PATH=~/.local/bin:$PATH
+if [ -f $HOME/.zsh_aliases ]; then
+    source $HOME/.zsh_aliases
+fi
 
-
-# this should always be the last line of the file
-eval "$(starship init zsh)"
+# Activate starship shell prompt
+eval "$(starship init zsh)" # this should always be the last line of the file
