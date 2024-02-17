@@ -1,0 +1,15 @@
+setup.sh
+.git
+.gitignore
+.vscode
+README.*
+LICENSE.*
+SECURITY.*
+CHANGELOG.*
+CONTRIBUTING.*
+CODE_OF_CONDUCT.*
+PULL_REQUEST_TEMPLATE.*
+ISSUE_TEMPLATE.*
+.github*
+.idea*
+.devcontainer*
