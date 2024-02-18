@@ -18,9 +18,9 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
+    export EDITOR='vim'
 else
-  export EDITOR='code'
+    export EDITOR='code'
 fi
 
 if [ -f $HOME/.zsh_profile ]; then
