@@ -9,7 +9,7 @@ do
     echo "stow: $folder"
     stow -D $folder
     stow --adopt --target=$HOME $folder
-    echo "stow: $folder done"
+    echo "stow: $folder DONE"
 
     # add folder to .stow-local-ignore
     echo "$folder" >> .stow-local-ignore
@@ -18,7 +18,7 @@ done
 echo "stow: whole directories starting with ."
 stow -D .
 stow --adopt --target=$HOME .
-echo "Done"
+echo "stow: DONE"
 
 # remove added folders from .stow-local-ignore
 for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
