@@ -13,11 +13,11 @@
 "$schema" = "https://starship.rs/config-schema.json"
 format = """
 $username$hostname$localip$shlvl$singularity$kubernetes\
-$directory$vcsh$fossil_branch$fossil_metrics$git_branch\
+:$directory$vcsh$fossil_branch$fossil_metrics$git_branch\
 $git_commit$git_state$git_metrics$git_status$hg_branch\
 $pijul_channel$docker_context$package$bun$c$cmake$cobol\
 $daml$dart$deno$dotnet$elixir$elm$erlang$fennel$golang\
-$gradle$haskell$haxe$helm$java$julia$kotlin$lua$nim$nodejs\
+$gradle$haskell$haxe$helm$java$julia$kotlin$lua$nim\
 $ocaml$opa$perl$php$pulumi$purescript$python$raku$rlang$red\
 $ruby$rust$scala$solidity$swift$terraform$typst$vlang$vagrant\
 $zig$buf$guix_shell$nix_shell$conda$meson$spack$memory_usage\
@@ -43,7 +43,7 @@ ssh_only = false
 ssh_symbol = "🌐 "
 trim_at = "."
 detect_env_vars = []
-format = "[$ssh_symbol$hostname]($style):"
+format = "[$ssh_symbol$hostname]($style)"
 style = "bold #23D18B"
 disabled = false
 
