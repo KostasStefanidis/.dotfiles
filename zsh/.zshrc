@@ -33,3 +33,5 @@ fi
 
 # Activate starship shell prompt
 eval "$(starship init zsh)" # this should always be the last line of the file
+
+source ~/.daytona.completion_script.zsh

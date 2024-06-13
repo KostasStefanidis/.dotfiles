@@ -13,6 +13,12 @@ export STARSHIP_CONFIG=$HOME/.starship/config.toml
 sudo sh -c "$(curl -sS https://starship.rs/install.sh)" "" --yes
 mkdir -p ~/.config && touch ~/.config/starship.toml
 
+# Install Python packages
+python3 -m pip install --user argcomplete
+
+# Install Daytona
+sh -C "$(curl -sf -L https://download.daytona.io/daytona/install.sh | sudo bash) && daytona server -y && daytona"
+
 sudo apt-get install -y stow
 # stow -D --target=$HOME .
 chmod +x stow.sh && ./stow.sh

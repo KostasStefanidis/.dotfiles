@@ -5,3 +5,5 @@ alias l='ls -CF'
 if [[ $(uname -r) == *WSL* ]]; then
     alias explorer='/mnt/c/Windows/explorer.exe || true'
 fi
+
+alias kubectl="minikube kubectl --"
