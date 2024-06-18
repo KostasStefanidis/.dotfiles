@@ -11,16 +11,16 @@ CASE_SENSITIVE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 HIST_STAMPS="dd.mm.yyyy"
 
-plugins=(zsh-autosuggestions)
+plugins=(zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-    export EDITOR='vim'
+  export EDITOR='vim'
 else
-    export EDITOR='code'
+  export EDITOR='code'
 fi
 
 if [ -f $HOME/.zsh_profile ]; then
@@ -31,7 +31,6 @@ if [ -f $HOME/.zsh_aliases ]; then
     source $HOME/.zsh_aliases
 fi
 
-# Activate starship shell prompt
-eval "$(starship init zsh)" # this should always be the last line of the file
-
 source ~/.daytona.completion_script.zsh
+
+eval "$(starship init zsh)"
