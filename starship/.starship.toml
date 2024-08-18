@@ -64,9 +64,9 @@ use_os_path_sep = true
 [directory.substitutions]
 
 [git_branch]
-format = '[ ➜  \($symbol$branch(:origin/$remote_branch)\)]($style)'
-symbol = ""
-style = "italic bold cyan"
+format = ' | [$symbol$branch(:origin/$remote_branch)]($style)'
+# symbol = ""
+style = "italic bold purple"
 truncation_length = 9223372036854775807
 truncation_symbol = "…"
 only_attached = false
@@ -106,7 +106,7 @@ disabled = false
 
 [git_status]
 format = '([ - \[$all_status$ahead_behind\]]($style))'
-style = "bold cyan"
+style = "bold purple"
 stashed = 'S'
 ahead = "⇡"
 behind = "⇣"
