@@ -31,6 +31,4 @@ if [ -f $HOME/.zsh_aliases ]; then
     source $HOME/.zsh_aliases
 fi
 
-source ~/.daytona.completion_script.zsh
-
 eval "$(starship init zsh)"
