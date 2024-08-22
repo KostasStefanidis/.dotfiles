@@ -65,7 +65,7 @@ use_os_path_sep = true
 
 [git_branch]
 format = ' | [$symbol$branch(:origin/$remote_branch)]($style)'
-# symbol = ""
+symbol = ""
 style = "italic bold purple"
 truncation_length = 9223372036854775807
 truncation_symbol = "…"
@@ -246,7 +246,7 @@ contexts = []
 
 ####################################################################################
 [aws]
-format = '[AWS: $symbol($profile )(\($region\) )(\[$duration\] )]($style)'
+format = ' | [$symbol($profile )(\($region\) )(\[$duration\] )]($style)'
 symbol = "☁️ "
 style = "bold yellow"
 disabled = true
@@ -258,11 +258,11 @@ force_display = false
 [aws.profile_aliases]
 
 [terraform]
-format = "via [$symbol$workspace]($style) "
+format = " | [$symbol$workspace]($style) "
 version_format = "v${raw}"
 symbol = "💠 "
 style = "bold 105"
-disabled = false
+disabled = true
 detect_extensions = [
     "tf",
     "tfplan",
