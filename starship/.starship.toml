@@ -149,7 +149,7 @@ vimcmd_replace_one_symbol = "[❮](bold purple)"
 disabled = false
 
 [package]
-format = "is [$symbol$version]($style) "
+format = "[ | $symbol$version]($style)"
 symbol = "📦 "
 style = "208 bold"
 display_private = false
@@ -316,7 +316,7 @@ detect_folders = []
 ####################################################################################
 [java]
 disabled = false
-format = "via [$symbol($version )]($style)"
+format = "[ | $symbol($version )]($style)"
 version_format = "v${raw}"
 style = "red dimmed"
 symbol = "☕ "
