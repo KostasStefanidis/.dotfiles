@@ -1,6 +1,15 @@
 #!/usr/bin/sh
-sudo apt-get update
+sudo apt-get update && sudo apt-get upgrade -y
+
+# Install Nix
+sh <(curl -L https://nixos.org/nix/install) --daemon --yes
+
+# Install Zsh
 sudo apt-get install -y zsh
+chsh -s $(which zsh)
+
+# Install tmux
+sudo apt-get install -y tmux
 
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
@@ -12,14 +21,15 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 # Install starship
 export STARSHIP_CONFIG=$HOME/.starship/config.toml
 sudo sh -c "$(curl -sS https://starship.rs/install.sh)" "" --yes
-mkdir -p ~/.config && touch ~/.config/starship.toml
+# mkdir -p ~/.config && touch ~/.config/starship.toml
 
 # Install Python packages
 python3 -m pip install --user argcomplete
 
 # Install Daytona
-sh -C "$(curl -sf -L https://download.daytona.io/daytona/install.sh | sudo bash) && daytona server -y && daytona"
+# sh -C "$(curl -sf -L https://download.daytona.io/daytona/install.sh | sudo bash) && daytona server -y && daytona"
 
+# Install stow
 sudo apt-get install -y stow
 # stow -D --target=$HOME .
 chmod +x stow.sh && ./stow.sh
