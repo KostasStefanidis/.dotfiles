@@ -31,4 +31,12 @@ if [ -f $HOME/.zsh_aliases ]; then
     source $HOME/.zsh_aliases
 fi
 
+if [ -f $HOME/.zsh_profile_local ]; then
+    source $HOME/.zsh_profile_local
+fi
+
+if [ -f $HOME/.zsh_aliases_local ]; then
+    source $HOME/.zsh_aliases_local
+fi
+
 eval "$(starship init zsh)"

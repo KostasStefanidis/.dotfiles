@@ -1,5 +1,5 @@
 #!/usr/bin/sh
-STOW_FOLDERS="zsh, starship"
+STOW_FOLDERS="zsh, starship, tmux"
 
 ## !! This script should be run from the dotfiles directory
 ## !! the --adopt flag will overwrite existing files in the target directory
