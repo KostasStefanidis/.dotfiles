@@ -2,3 +2,4 @@ export UID=$(id -u)
 export GID=$(id -g)
 export PATH=~/.local/bin:$PATH
 export STARSHIP_CONFIG=$HOME/.starship.toml
+export KUBE_EDITOR=code
