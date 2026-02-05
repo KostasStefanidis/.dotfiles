@@ -1,5 +1,5 @@
 #!/usr/bin/sh
-STOW_FOLDERS="zsh, starship, tmux"
+STOW_FOLDERS="zsh, starship, tmux, git"
 
 ## !! This script should be run from the dotfiles directory
 ## !! the --adopt flag will overwrite existing files in the target directory
@@ -23,5 +23,5 @@ echo "stow: DONE"
 # remove added folders from .stow-local-ignore
 for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
 do
-    sed -i "/$folder/d" .stow-local-ignore
+    sed -i "/^$folder$/d" .stow-local-ignore
 done
