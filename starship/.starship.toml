@@ -64,7 +64,7 @@ use_os_path_sep = true
 [directory.substitutions]
 
 [git_branch]
-format = '[ ➜  \($symbol$branch(:origin/$remote_branch)\)]($style)'
+format = '[ ➜ \($symbol$branch(:origin/$remote_branch)\)]($style)'
 symbol = ""
 style = "italic bold purple"
 truncation_length = 9223372036854775807
@@ -218,17 +218,19 @@ style = "red bold dimmed"
 disabled = false
 
 [helm]
-format = "via [$symbol($version )]($style)"
+format = "[ | $symbol($version )]($style)"
 version_format = "v${raw}"
 symbol = "⎈ "
-style = "bold white"
+style = "cyan bold"
 disabled = false
 detect_extensions = []
 detect_files = [
     "helmfile.yaml",
     "Chart.yaml",
 ]
-detect_folders = []
+detect_folders = [
+    "helm/"
+]
 
 [kubernetes]
 symbol = "☸ "
